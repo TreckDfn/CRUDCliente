@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="dard">
+    <div class="card header">
+      <h2>Listado de Clientes</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID Cliente</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Edad</th>
+            <th>Tipo de prestamo</th>
+            <th>Total de prestamo</th>
+            <th>Status</th>
+            <th>Abono</th>
+            <th>Adeudo</th>
+            <th>Pagar</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of clientes">
+            <td>{{c.idCliente}}</td>
+            <td>{{c.nombre}}</td>
+            <td>{{c.apellidoPaterno}}</td>
+            <td>{{c.apellidoMaterno}}</td>
+            <td>{{c.edad}}</td>
+            <td>{{c.prestamoTipo}}</td>
+            <td>{{c.prestamoCantidad}}</td>
+            <td>{{c.status}}</td>
+            <td>{{c.abono}}</td>
+            <td>{{c.adeudo}}</td>
+            <td><button class="btn btn-outline-success" (click)="pagar(c.idCliente)">Pagar</button></td>
+            <td><button class="btn btn-outline-warning" (click)="editar(c.idCliente)" >Editar</button></td>
+            <td><button class="btn btn-outline-danger" (click)="eliminar(c.idCliente)">Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

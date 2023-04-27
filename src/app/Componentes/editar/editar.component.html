@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Editar Cliente</h2>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+
+          <div class="row">
+            <div class="col">
+              <label for="idCliente">ID Cliente:</label>
+              <input disabled type="number" class="form-control" name="idCliente" [(ngModel)]="cliente.idCliente" required>
+            </div>
+
+            <div class="col">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" name="nombre" required [(ngModel)]="cliente.nombre">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="apellidoPaterno">Apellido paterno:</label>
+              <input type="text" class="form-control" name="apellidoPaterno" required [(ngModel)]="cliente.apellidoPaterno">
+            </div>
+
+            <div class="col">
+              <label for="apellidoPaterno">Apellido materno:</label>
+              <input type="text" class="form-control" name="apellidoMaterno" required [(ngModel)]="cliente.apellidoMaterno" >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="edad">Edad:</label>
+              <input type="number" class="form-control" name="edad" required [(ngModel)]="cliente.edad" >
+            </div>
+
+            <div class="col">
+              <label for="prestamoTipo">Tipo de prestamo:</label>
+              <input type="text" class="form-control" name="prestamoTipo" required [(ngModel)]="cliente.prestamoTipo" >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="prestamoCantidad">Cantidad del prestamo:</label>
+              <input type="number" class="form-control" name="prestamoCantidad" required [(ngModel)]="cliente.prestamoCantidad">
+            </div>
+
+            <div class="col">
+              <label for="status">Status:</label>
+              <input type="text" class="form-control" name="status" required [(ngModel)]="cliente.status">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="abono">Abono:</label>
+              <input type="number" class="form-control" name="abono" required [(ngModel)]="cliente.abono">
+            </div>
+
+            <div class="col">
+              <label for="adeudo">Adeudo:</label>
+              <input type="number" class="form-control" name="adeudo" required [(ngModel)]="cliente.adeudo">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+
+            </div>
+
+            <div class="col">
+              <br>
+              <button class="btn btn-outline-primary" (click)="editar()">Confirmar cambios</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+

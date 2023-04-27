@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Realizar abono</h2>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+
+          <div class="row">
+            <div class="col">
+              <label for="prestamoCantidad">Total del prestamo:</label>
+              <input disabled type="number" class="form-control" name="prestamoCantidad" required [(ngModel)]="cliente.prestamoCantidad">
+            </div>
+
+            <div class="col">
+              <label for="adeudo">Adeudo:</label>
+              <input disabled type="number" class="form-control" name="adeudo" required [(ngModel)]="cliente.adeudo" >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="abono">Abono total:</label>
+              <input disabled type="number" class="form-control" name="abono" required [(ngModel)]="cliente.abono">
+            </div>
+
+            <div class="col">
+              <label for="pago">Cantidad a abonar:</label>
+              <input type="number" class="form-control" name="pago" required [(ngModel)]="pago">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+              <br>
+              <button class="btn btn-outline-success" (click)="pagar()">Realizar pago</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
